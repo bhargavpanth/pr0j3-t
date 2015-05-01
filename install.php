@@ -12,7 +12,9 @@
 		state VARCHAR(100),
 		country VARCHAR(100),
 		mobile VARCHAR(15),
-		referer VARCHAR(200)
+		referer VARCHAR(200),
+		dateOfTrip DATE,
+		destination VARCHAR(200)
 	);
 HEAD;
 
