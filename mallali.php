@@ -1,5 +1,8 @@
 <?php
 	if(isset($_POST['submit'])){
+		require_once("config.php");
+		mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
+		mysql_select_db($DB_NAME);
 		$trekDate	=	mysql_real_escape_string($_POST['date']);
 		$firstName	=	mysql_real_escape_string($_POST['fname']);
 		$lastName	=	mysql_real_escape_string($_POST['lname']);
@@ -11,11 +14,8 @@
 		$state		=	mysql_real_escape_string($_POST['state']);
 		$country	=	mysql_real_escape_string($_POST['country']);
 		$phoneNum	=	mysql_real_escape_string($_POST['mobile']);
-		$referal	=	mysql_real_escape_string($_POST['referal']);
+		$referal	=	mysql_real_escape_string($_POST['refereal']);
 		$sql		=	"INSERT INTO PlanYourWeekEnd (`fname`, `lname`, `email`, `dob`, `sex`, `address`, `city`, `state`, `country`, `mobile`, `referer`, `dateOfTrip`, `destination`) VALUES('$firstName', '$lastName', '$email', '$dob','$gender','$address','$city','$state','$country','$phoneNum','$referal','$trekDate','mallali');";
-		require_once("config.php");
-		mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
-		mysql_select_db($DB_NAME);
 		if(mysql_query($sql)){
 			header("location:thankYou.php?success");
 		}else{
@@ -122,7 +122,7 @@
 
 						<li id="slide6">
 							<h3>Register for the trip</h3>
-							<form action="">
+							<form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
 								<table>
 									<tr>
 										<td>
@@ -197,7 +197,7 @@
 
 									<tr>
 										<td><label for="">Mobile</label></td>
-										<td><input type="text"></td>
+										<td><input name="mobile" type="text"></td>
 									</tr>
 
 									<tr>
