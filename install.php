@@ -13,8 +13,10 @@
 		country VARCHAR(100),
 		mobile VARCHAR(15),
 		referer VARCHAR(200)
-		);
+	);
 HEAD;
+
+
 require_once("config.php");
 mysql_connect($DB_HOST,$DB_USER,$DB_PASS) or die(mysql_error());
 mysql_select_db($DB_NAME);
