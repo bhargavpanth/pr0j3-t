@@ -141,7 +141,7 @@
 									</tr>
 									
 									<tr>
-										<td><label for="">Sex</label></td>
+										<td><label for="">Gender</label></td>
 										<td>
 										<select name="gender" id="gender">
 										<option value="male">Male</option>
@@ -172,7 +172,7 @@
 
 									<tr>
 										<td><label for="">Mobile</label></td>
-										<td><input type="text"></td>
+										<td><input type="text" name="mobile"></td>
 									</tr>
 
 									<tr>
