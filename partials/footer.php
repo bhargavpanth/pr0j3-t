@@ -1,3 +1,3 @@
 <footer>
-<img src="img/landscape.png" alt="">
+<img src="img/landscape.png" style="width:100%" alt="">
 </footer>
