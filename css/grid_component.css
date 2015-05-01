@@ -30,7 +30,7 @@ a:hover {
 	padding: 0px;
 	margin: 0 auto;
 	list-style: none;
-	position: absolute;
+	/*position: absolute;*/
 	overflow: hidden;
 	/*max-width: 70%;*/
 	/*margin-left: 250px;
@@ -53,6 +53,7 @@ a:hover {
 	/*opacity: 0.8;*/
 	float: center;
 	display: block;
+
 	/*width: auto;
 	height: auto;*/
 	cursor: pointer;
@@ -64,16 +65,17 @@ a:hover {
 	max-width: auto;
 	/*padding-left: 2px;*/
 	height: auto;
+	margin: 20px;
 }
 
 /* Flexbox is used for centering the heading */
 .grid li a div {
 	position: absolute;
 	left: 0px;
-	top: 80px;
+	top: 0px;
 	right: 0px;
 	bottom: 0px;
-	background: rgba(239, 235, 229,0.3);
+	background: rgba(239, 235, 229,0.6);
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -99,8 +101,11 @@ a:hover {
 	font-size: 1.2em;
 	letter-spacing: auto;
 	padding: 0 10px;
+	margin: auto auto;
 }
 
+
+/*Footer*/
 
 
 /*Media query for grids*/

@@ -16,6 +16,6 @@
 	<!-- Images Grid -->
 	<?php require 'partials/image_grid.php' ?>
 
-
+	<?php require 'partials/footer.php' ?>
 </body>
 </html>

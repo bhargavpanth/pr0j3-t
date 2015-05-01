@@ -1,7 +1,7 @@
 	<html>
 	<!-- <link rel="stylesheet" type="text/css" href="../css/grid_default.css" /> -->
 	<link rel="stylesheet" type="text/css" href="../css/grid_component.css" />
-	<div style="width:90%; margin:0 auto;" >
+	<div style="width:60%; margin:0 auto;" >
 	<ul class="grid">
 	
 		 <!-- <li><a href="#"><img src="../img/thumbs/manali.png" style='width:100%;' border="0" alt="cover" /><div><h3>Hampi</h3></div></a></li> -->
