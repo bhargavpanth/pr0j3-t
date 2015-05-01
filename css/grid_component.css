@@ -27,11 +27,11 @@ a:hover {
 
 .grid {
 	/*margin: 35px 0 0 120px;*/
-	/*padding: 0px;*/
-
+	padding: 0px;
+	margin: 0 auto;
 	list-style: none;
 	position: absolute;
-	width: 100%;
+	width: 90%;
 	overflow: hidden;
 	/*max-width: 70%;*/
 	/*margin-left: 250px;
