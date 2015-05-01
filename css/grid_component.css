@@ -1,0 +1,175 @@
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+
+a {
+	/*color: #f0f0f0;*/
+	text-decoration: none;
+}
+
+a:hover {
+	color: #32231d;
+}
+
+.grid {
+	/*margin: 35px 0 0 120px;*/
+	/*padding: 0px;*/
+
+	list-style: none;
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	/*max-width: 70%;*/
+	/*margin-left: 250px;
+	margin-right: 250px;*/ 
+	/*margin: 0 240px 0 240px;*/
+}
+
+.grid li {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	/* Fallback */
+	width: auto; 
+	/*width: -webkit-calc(100% / 3);*/
+	/*width: calc(100% / 3);*/
+}
+
+.grid li a,
+.grid li a img {
+	/*opacity: 0.8;*/
+	float: center;
+	display: block;
+	/*width: auto;
+	height: auto;*/
+	cursor: pointer;
+/*	padding-bottom: 5px;*/
+}
+
+.grid li a img {
+
+	max-width: auto;
+	/*padding-left: 2px;*/
+	height: auto;
+}
+
+/* Flexbox is used for centering the heading */
+.grid li a div {
+	position: absolute;
+	left: 0px;
+	top: 80px;
+	right: 0px;
+	bottom: 0px;
+	background: rgba(239, 235, 229,0.3);
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+}
+
+.grid li a:hover div {
+	opacity: 1;
+	-webkit-transition: all .3s ease-in;
+	transition: all .3s ease-in; 
+}
+
+.grid li a div h3 {
+	width: auto;
+	color: #32231d;
+	/*text-transform: uppercase;*/
+	font-size: 1.2em;
+	letter-spacing: auto;
+	padding: 0 10px;
+}
+
+
+
+/*Media query for grids*/
+
+
+
+/* Example for media query: change number of items per row */
+/*
+@media screen and (max-width: 1190px) {
+	#cover{
+		width: 20%;
+	}
+	.grid li {
+		width: 20%;*/ /* Fallback */
+/*		width: -webkit-calc(100% / 5);
+		width: calc(100% / 5);*/
+/*	}
+}
+
+@media screen and (max-width: 945px) {
+	#cover{
+		width: 25%;
+	}
+	.grid li {
+		width: 25%;*/ /* Fallback */
+	/*	width: -webkit-calc(100% / 4);
+		width: calc(100% / 4);*/
+/*	}
+}
+
+@media screen and (max-width: 660px) {
+	.container #cover{
+		width: 33.3333333%;
+	}
+	.grid li {
+		width: 33.3333333%; *//* Fallback */
+	/*	width: -webkit-calc(100% / 4);
+		width: calc(100% / 4);*/
+/*	}
+}
+
+@media screen and (max-width: 660px) {
+	.container #cover{
+		width: 33.3333333%
+	}
+	.grid li {
+		width: 33.3333333%;*/ /* Fallback */
+	/*	width: -webkit-calc(100% / 4);
+		width: calc(100% / 4);*/
+/*	}
+}
+
+@media screen and (max-width: 400px) {
+	.container #cover{
+		width: 50%;
+	}
+	.grid li {
+		width: 50%;*/ /* Fallback */
+	/*	width: -webkit-calc(100% / 4);
+		width: calc(100% / 4);*/
+/*	}
+}
+*/
+/*@media screen and (max-width: 300px) {
+	.container #cover{
+		width: 100%;
+	}
+	.grid li {
+		width: 100%;
+	}
+}*/

@@ -1,0 +1,216 @@
+hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+.hrmenu {
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	/*overflow: hidden;*/
+	/*margin-top: 0.75em;*/
+	background: rgba(239,235,229,0.7);
+	border-bottom: 4px solid #32231d;
+/*	-webkit-transition: all .3s ease-in;
+	transition: all .3s ease-in;*/
+	/*border-top: 8px solid #cc682c;*/
+	/*border-bottom: 4px solid #cc682c;*/
+}
+
+/* general ul style */
+.hrmenu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#img{
+	padding-top: 10px;
+	
+}
+
+/* first level ul style */
+.hrmenu > ul,
+.hrmenu .hrsub-inner {
+	width: 90%;
+	max-width: 70em;
+	margin: 0 auto;
+	padding: 0 1.875em;
+}
+
+.hrmenu > ul > li {
+	display: inline-block;
+}
+
+
+
+.hrmenu > ul > li > a {
+	font-weight: 700;
+	padding: 1em 2em;
+	color: #32231d;
+	display: inline-block;
+}
+
+.hrmenu #cm > ul > li > a {
+	color: #efebe5;
+	-webkit-transition: all .3s ease-in;
+	transition: all .3s ease-in;
+}
+
+#cm > ul > li > a:hover { color: #32231d;}
+
+.hrmenu > ul > li > a:hover {
+	-webkit-transition: all .3s ease-in;
+	transition: all .3s ease-in;
+	color: #cc682c;
+	/*border-top: solid #cc682c;*/
+}
+
+.hrmenu > ul > li.hropen,
+.hrmenu > ul > li.hropen > a:hover {
+	color: #cc682c;
+	/*background: #cc682c;*/
+	/*background: rgba(204,104,44,0.9);*/
+}
+
+/* sub-menu */
+.hrmenu .hrsub {
+	display: none;
+	position: absolute;
+	/*background: #cc682c;*/
+	background: rgba(204,104,44,0.9);
+	width: 100%;
+	left: 0;
+}
+
+.hropen .hrsub {
+	display: block;
+	padding-bottom: 3em;
+}
+
+.hrmenu .hrsub-inner > div {
+	width: 33%;
+	float: left;
+	padding: 0 2em 0;
+}
+
+.hrmenu .hrsub-inner:before,
+.hrmenu .hrsub-inner:after {
+	content: " ";
+	display: table;
+}
+
+.hrmenu .hrsub-inner:after {
+	clear: both;
+	/*color: #efebe5;*/
+}
+
+.hrmenu .hrsub-inner > div a {
+	line-height: 2em;
+}
+
+.hrsub h4 {
+	color: #32231d;
+	padding: 2em 0 0.6em;
+	margin: 0;
+	font-size: 160%;
+	font-weight: 300;
+}
+
+/*footer*/
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+
+/*footer{
+	margin: 850px 0 0 0;
+	position: relative;
+	color: #fff;
+	background: #32231d;
+	margin: 0 auto;
+	padding: 0 1.875em;
+	padding: 5em 10em;
+
+}
+.footcontent a{
+	padding-right: 2em;
+	padding-left: 2em;
+
+}
+a:hover{
+	color: #cc682c;
+	-webkit-transition: all .3s ease-in;
+	transition: all .3s ease-in; 
+}*/
+
+/* Examples for media queries */
+
+/*@media screen and (max-width: 52.75em) { 
+
+	.hrmenu {
+		font-size: 80%;
+	}
+
+}
+
+@media screen and (max-width: 43em) { 
+
+	.hrmenu {
+		font-size: 120%;
+		border: none;
+	}
+
+	.hrmenu > ul,
+	.hrmenu .hrsub-inner {
+		width: 100%;
+		padding: 0;
+	}
+
+	.hrmenu .hrsub-inner {
+		padding: 0 2em;
+		font-size: 75%;
+	}
+
+	.hrmenu > ul > li {
+		display: block;
+		/*border-bottom: 4px solid #cc682c
+	}
+
+	.hrmenu > ul > li > a { 
+		display: block;
+		padding: 1em 3em;
+	}
+
+	.hrmenu .hrsub { 
+		position: relative;
+	}
+
+	.hrsub h4 {
+		padding-top: 0.6em;
+	}
+
+}
+
+@media screen and (max-width: 36em) { 
+	.hrmenu .hrsub-inner > div {
+		width: 100%;
+		float: none;
+		padding: 0 2em;
+	}
+}
+
+
+/*@media screen and (max-width: 43em){
+	.footer{
+		padding: 1em 3em;
+		font-size: 30%;
+	}
+}*/
