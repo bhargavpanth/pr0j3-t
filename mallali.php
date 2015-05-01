@@ -1,3 +1,28 @@
+<?php
+	if(isset($_POST['submit'])){
+		$trekDate	=	mysql_real_escape_string($_POST['date']);
+		$firstName	=	mysql_real_escape_string($_POST['fname']);
+		$lastName	=	mysql_real_escape_string($_POST['lname']);
+		$email 		=	mysql_real_escape_string($_POST['email']);
+		$dob		=	mysql_real_escape_string($_POST['dob']);
+		$gender		=	mysql_real_escape_string($_POST['gender']);
+		$address	=	mysql_real_escape_string($_POST['mail']);
+		$city		=	mysql_real_escape_string($_POST['city']);
+		$state		=	mysql_real_escape_string($_POST['state']);
+		$country	=	mysql_real_escape_string($_POST['country']);
+		$phoneNum	=	mysql_real_escape_string($_POST['mobile']);
+		$referal	=	mysql_real_escape_string($_POST['referal']);
+		$sql		=	"INSERT INTO PlanYourWeekEnd (`fname`, `lname`, `email`, `dob`, `sex`, `address`, `city`, `state`, `country`, `mobile`, `referer`, `dateOfTrip`, `destination`) VALUES('$firstName', '$lastName', '$email', '$dob','$gender','$address','$city','$state','$country','$phoneNum','$referal','$trekDate','mallali');";
+		require_once("config.php");
+		mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
+		mysql_select_db($DB_NAME);
+		if(mysql_query($sql)){
+			header("location:thankYou.php?success");
+		}else{
+			header("location:thankYou.php?fail");
+		}
+	}else{
+?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <?php require 'partials/navbar.php' ?>
@@ -238,3 +263,6 @@
 
 <!-- 	<?php require 'partials/footer.php' ?>-->
 </html>
+<?php
+}
+?>
