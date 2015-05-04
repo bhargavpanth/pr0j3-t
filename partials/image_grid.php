@@ -13,7 +13,7 @@
 		 	$query=mysql_query($sql) or die(mysql_error());
 		 	while($data=mysql_fetch_object($query)){
 		 		?>
-				<li><a href="#"><img src="<?php echo $data->image; ?>" style='width:100%' border="0" alt=""><div><h3><?php echo $data->route; ?></h3></div></a></li>
+				<li><a href="route.php?id=<?php echo $data->id; ?>"><img src="<?php echo $data->image; ?>" style='width:100%' border="0" alt=""><div><h3><?php echo $data->route; ?></h3></div></a></li>
 		 		<?php
 
 		 	}
