@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<?php require 'partials/navbar.php' ?>
+<?php require 'partials/navbar.php' ?>
 <br>
 	<body bgcolor="#efebe5">
 		<div class="container">
