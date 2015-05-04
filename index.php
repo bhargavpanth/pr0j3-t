@@ -12,7 +12,7 @@
 			</div>			 
 				<hr>
 			<center><h2>HIGHLIGHTS</h2>
-<?php require 'partials/image_grid.php' ?>
+
 </center>
 </div>
 

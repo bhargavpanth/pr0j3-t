@@ -16,7 +16,7 @@
 				<nav id="hrmenu" class="hrmenu">
 					<ul>	
 						<li id="image">
-							<a href=""><img src="img/small_logo.png" alt=""></a>
+							<a href="index.php"><img src="img/small_logo.png" alt=""></a>
 						</li>
 						<li>
 							<a href="#">Destinations</a>

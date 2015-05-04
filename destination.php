@@ -7,7 +7,19 @@
 </head>
 <body>
 	<?php require 'partials/navbar.php' ?> <br><br><br><br><br>
-	<img src="img/cover.jpg" style="width:100%" alt="cover">
+	<?php
+		$route=$_GET['id'];
+		require_once("config.php");
+		$con=mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
+		mysql_select_db($DB_NAME);
+		$route=mysql_real_escape_string($route);
+		$sql="SELECT cover FROM destinations WHERE codeName='$route'";
+		$query=mysql_query($sql);
+		$data=mysql_fetch_object($query);
+
+
+	?>
+	<img src="<?php echo $data->cover; ?>" style="width:100%;" height="450" alt="cover">
 	<hr>
 	
 		<center>
