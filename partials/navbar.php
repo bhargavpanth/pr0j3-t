@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
@@ -26,12 +25,20 @@
 									<div id="cm">
 										<h4>Destinations</h4>
 										<ul>
-											<li><a href="#">Himachal Pradesh</a></li>
-											<li><a href="#">Coorg</a></li>
-											<li><a href="#">Goa</a></li>
-											<li><a href="#">Hampi</a></li>
-											<li><a href="#">Kerala</a></li>
-											<li><a href="#">Pondy</a></li>
+											<?php
+												require_once("config.php");
+												$con=mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
+												mysql_select_db($DB_NAME);
+												$sql="SELECT * FROM destinations;";
+												$query=mysql_query($sql);
+												while($data=mysql_fetch_object($query)){
+													?>
+											<li><a href="destination.php?id=<?php echo $data->codeName; ?>"><?php echo $data->title; ?></a></li>
+													<?php
+												}
+
+
+											?>
 											
 										</ul>
 									</div>
