@@ -42,38 +42,8 @@
 			<hr>
 				<div id="cbp-contentslider" class="cbp-contentslider">
 					<ul>
+
 						<li id="slide1">
-							<h3>Mallali - Vital Information</h3>
-							<div>
-								<div class="cbp-content">
-									<p>
-											<a href="">Region</a>- Coorg/Kodagu <br>
-											<a href="">Duration</a>- 2-3 days(weekend trips) <br>
-											<a href="">Difficulty</a>- Easy <br>
-											<a href="">Terrain</a>- Mountain and valley <br>
-											<a href="">Cost</a>- 6000/-
-									</p>
-									 <p><br><br><br><br><br></p> 
-								</div>
-							</div>
-						</li>
-						<li id="slide2">
-							<h3>Mallali - Trail</h3>
-							<div>
-								<div class="cbp-content">
-									<p>The journey starts from Mallali,Somerpet, an undiscovered 
-									natural waterfall which resides within the Pushpagiri forest
-									in the Western Ghats.The scenic trek is visually aided by the
-									strong natural flow of the Girihole river. The trekkers will 
-									pitch camp near the waterfall with occasional water showers 
-									cooling off the trek experience. The succeeding day is a day
-									 of adrenaline rushes with activities such as mountain biking,
-									 white water rafting, kayaking and coffee estate tours.</p>
-									<!-- <p></p> -->
-								</div>
-							</div>
-						</li>
-						<li id="slide3">
 							<h3>Mallali - Brief Itinerary</h3>
 							<div>
 								<div class="cbp-content">
@@ -83,7 +53,7 @@
 							</div>
 						</li>
 
-						<li id="slide4">
+						<li id="slide2">
 							<h3>Mallali Long Itinerary</h3>
 							<div>
 								<div class="cbp-content">
@@ -109,7 +79,7 @@
 							</div>
 						</li>
 
-						<li id="slide5">
+						<li id="slide3">
 							<h3>Mallali - Unique to us</h3>
 							<div>
 								<div class="cbp-content">
@@ -120,7 +90,7 @@
 							</div>
 						</li>
 
-						<li id="slide6">
+						<li id="slide4">
 							<h3>Register for the trip</h3>
 							<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 								<table>
@@ -225,12 +195,12 @@
 
 					</ul>
 					<nav>
-						<a href="#slide1" class=""><span>Vital Info</span></a>
-						<a href="#slide2" class=""><span>Trail</span></a>
-						<a href="#slide3" class=""><span>Brief Itinerary</span></a>
-						<a href="#slide4" class=""><span>Long Itinerary</span></a>
-						<a href="#slide5" class=""><span>Unique</span></a>
-						<a href="#slide6" class=""><span>Register</span></a>
+						<a href="#slide1" class=""><span>Highlights</span></a>
+						<a href="#slide2" class=""><span>Details</span></a>
+						<a href="#slide3" class=""><span>Guidelines</span></a>
+						<a href="#slide4" class=""><span>Register</span></a>
+<!-- 						<a href="#slide5" class=""><span>Unique</span></a>
+						<a href="#slide6" class=""><span>Register</span></a> -->
 					</nav>
 				</div>
 				<?php require 'partials/footer.php' ?>
