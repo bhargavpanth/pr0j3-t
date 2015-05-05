@@ -44,7 +44,7 @@
 					<ul>
 
 						<li id="slide1">
-							<h3>Mallali - Brief Itinerary</h3>
+							<h3>Highlights</h3>
 							<div>
 								<div class="cbp-content">
 									<p><a href="">Day 1</a> <br> Arrival at Coorg Check in at resort <br> Jeep journey to falls <br> Trek and camp for night.</p>
@@ -54,7 +54,7 @@
 						</li>
 
 						<li id="slide2">
-							<h3>Mallali Long Itinerary</h3>
+							<h3>Details</h3>
 							<div>
 								<div class="cbp-content">
 									<p><a href="">Day 1 </a><br>
@@ -80,7 +80,7 @@
 						</li>
 
 						<li id="slide3">
-							<h3>Mallali - Unique to us</h3>
+							<h3>Gudelines</h3>
 							<div>
 								<div class="cbp-content">
 									<p>We at rustic routes ensure the routes are less weary and the trials have a fresh natural 
@@ -194,14 +194,14 @@
 						</li>
 
 					</ul>
-					<nav>
-						<a href="#slide1" class=""><span>Highlights</span></a>
-						<a href="#slide2" class=""><span>Details</span></a>
-						<a href="#slide3" class=""><span>Guidelines</span></a>
-						<a href="#slide4" class=""><span>Register</span></a>
-<!-- 						<a href="#slide5" class=""><span>Unique</span></a>
-						<a href="#slide6" class=""><span>Register</span></a> -->
-					</nav>
+
+						<nav>
+							<a href="#slide1" class=""><span>Highlights</span></a>
+							<a href="#slide2" class=""><span>Details</span></a>
+							<a href="#slide3" class=""><span>Guidelines</span></a>
+							<a href="#slide4" class=""><span>Register</span></a>
+						</nav>
+
 				</div>
 				<?php require 'partials/footer.php' ?>
 			</div>
