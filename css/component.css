@@ -122,14 +122,14 @@ hr {
 
 /*footer*/
 
-footer {
-    position: absolute;
+/*footer {
+    position: relative;
     left: 0;
     bottom: 0;
     height: 100px;
     width: 100%;
 }
-
+*/
 /*footer{
 	margin: 850px 0 0 0;
 	position: relative;

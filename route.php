@@ -233,6 +233,7 @@
 						<a href="#slide6" class=""><span>Register</span></a>
 					</nav>
 				</div>
+				<?php require 'partials/footer.php' ?>
 			</div>
 			
 		</div>
@@ -240,27 +241,13 @@
 		<script src="js/content_jquery.cbpContentSlider.min.js"></script>
 		<script>
 			$(function() {
-				/*
-				- how to call the plugin:
-				$( selector ).cbpContentSlider( [options] );
-				- options:
-				{
-					// default transition speed (ms)
-					speed : 500,
-					// default transition easing
-					easing : 'ease-in-out',
-					// current item's index
-					current : 0
-				}
-				- destroy:
-				$( selector ).cbpContentSlider( 'destroy' );
-				*/
+
 
 				$( '#cbp-contentslider' ).cbpContentSlider();
 			});
 		</script>
 	</body>
 
-<!-- 	<?php require 'partials/footer.php' ?>-->
+
 </html>
 <?php } ?>
