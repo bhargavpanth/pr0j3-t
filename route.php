@@ -65,9 +65,9 @@
 									and makes its way near the steep falls. After spending the evening basking in the glorious view, 
 									the campsite needs to be setup which has a magnificent view of the waterfall, where campers 
 									will stay the night. An authentic traditional culinary experience is provided to encapsulate the 
-									soul of the Kodavas in the light of the campfire.<!-- </p>
+									soul of the Kodavas in the light of the campfire.</p>
 
-									<p> -->
+									<p>
 									<a href="">Day 2</a> <br>
 									The morning sun, the lush greenery and the flamboyant waterfall are all attributes which make 
 									up a perfect morning or as we call it Day 2. The journey is now reversed as the hikers make 
