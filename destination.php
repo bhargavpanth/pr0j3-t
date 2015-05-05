@@ -35,7 +35,7 @@
 	
 	<!-- Images Grid -->
 	<?php require_once('partials/image_grid.php'); ?>
-
+	<?php require_once('partials/footer.php'); ?>
 <!--  -->
 </body>
 </html>
