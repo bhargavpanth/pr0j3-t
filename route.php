@@ -31,13 +31,28 @@
 		<link rel="stylesheet" type="text/css" href="css/content_default.css" />
 		<link rel="stylesheet" type="text/css" href="css/content_component.css" />
 		<script src="js/content_modernizr.custom.js"></script>
+		<style>
+			.cbp-content li{
+				position:relative !important;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container">
 		<br><br><br><br>
 			<div class="main"><br>
 			<center>
-			<img id="image" src="img/cover.jpg" style='width:100%;' border="0" alt="cover">
+			<?php
+				require_once("config.php");
+				mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
+				mysql_select_db($DB_NAME);
+				$id		=	mysql_real_escape_string($_GET['id']);
+				$sql	=	"SELECT destinations.cover,routes.title,routes.type,routes.image,info.title,info.vital,info.brief,info.details,info.guidelines FROM routes,destinations,info WHERE routes.belongsTo=destinations.id AND routes.id=$id AND info.belongsTo=routes.id;";
+				$query	=	mysql_query($sql);
+				$data	=	mysql_fetch_object($query);
+
+			?>
+			<img id="image" src="<?php echo $data->cover;?>" style='width:100%;' height="450" border="0" alt="cover">
 			</center>
 			<hr>
 				<div id="cbp-contentslider" class="cbp-contentslider">
@@ -57,23 +72,14 @@
 							<h3>Details</h3>
 							<div>
 								<div class="cbp-content">
-									<p><a href="">Day 1 </a><br>
-									Amidst the early morning mist, a traditional Kodava breakfast welcomes the travelers. Enjoy 
-									a special tour of the local self sustained coffee estates. Leave for the Mallalli falls trail by jeep 
-									and take in the surreal imagery. A haven for photographers and travel writers or just nature 
-									enthusiasts, the Mallalli Falls, is a spectacle to behold. The trek takes you through the valley 
-									and makes its way near the steep falls. After spending the evening basking in the glorious view, 
-									the campsite needs to be setup which has a magnificent view of the waterfall, where campers 
-									will stay the night. An authentic traditional culinary experience is provided to encapsulate the 
-									soul of the Kodavas in the light of the campfire.</p>
-
 									<p>
-									<a href="">Day 2</a> <br>
-									The morning sun, the lush greenery and the flamboyant waterfall are all attributes which make 
-									up a perfect morning or as we call it Day 2. The journey is now reversed as the hikers make 
-									their way to the resort where they will enjoy a royal brunch and spend the rest of the day in 
-									leisure activities aimed at restoring the harmonic balance between the spirit and the body to 
-									provide a sense of rejuvenation.
+									<?php
+									$value=$data->details;
+									$value=str_replace("\n\n", "\n", $value);
+									$value=str_replace("\n\n", "\n", $value);
+									$value=str_replace("\n\n", "\n", $value);
+									echo nl2br(str_replace("\n\n", "\n", $value));
+									?>
 									</p>
 								</div>
 							</div>
@@ -83,9 +89,17 @@
 							<h3>Gudelines</h3>
 							<div>
 								<div class="cbp-content">
-									<p>We at rustic routes ensure the routes are less weary and the trials have a fresh natural 
-									experience far away from the ordeals of the traditional treks where the hustle and a bustle of a 
-									city is immaterial in front of the gorgeous eye candy, that is the Mallalli falls.</p>
+									<p><?php
+									$value=$data->guidelines;
+									$value=str_replace("\n\n", "\n", $value);
+									$value=str_replace("\n\n", "\n", $value);
+									$value=str_replace("\n\n", "\n", $value);
+									$value=str_replace("\n\n", "\n", $value);
+									$value=str_replace("\n\n", "\n", $value);
+									$value=str_replace("\n\n", "\n", $value);
+									$value=str_replace("\n\n", "\n", $value);
+									echo nl2br(str_replace("\n\n", "\n", $data->guidelines));
+									?></p>
 								</div>
 							</div>
 						</li>
