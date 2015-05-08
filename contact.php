@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<head><title><link rel="shortcut icon" href="img/small_logo.png" />
+rusticroutes.com</title></head>
 	<?php require 'partials/navbar.php' ?>
 <br>
 	<body bgcolor="#efebe5">

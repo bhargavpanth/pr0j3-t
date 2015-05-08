@@ -1,3 +1,4 @@
+<link rel="shortcut icon" href="img/small_logo.png" />
 <link rel="stylesheet" type="text/css" href="css/grid_component.css" />
 <?php require 'partials/navbar.php' ?>
 <br>

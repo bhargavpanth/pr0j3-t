@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>onrusticroutes.com</title>
+	<link rel="shortcut icon" href="img/small_logo.png" />
 	<link rel="stylesheet" type="text/css" href="../css/grid_component.css" />
 </head>
 <body>
