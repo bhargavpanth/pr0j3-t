@@ -89,17 +89,15 @@
 							<h3>Gudelines</h3>
 							<div>
 								<div class="cbp-content">
-									<p><?php
+									<p>
+									<?php
 									$value=$data->guidelines;
 									$value=str_replace("\n\n", "\n", $value);
 									$value=str_replace("\n\n", "\n", $value);
 									$value=str_replace("\n\n", "\n", $value);
-									$value=str_replace("\n\n", "\n", $value);
-									$value=str_replace("\n\n", "\n", $value);
-									$value=str_replace("\n\n", "\n", $value);
-									$value=str_replace("\n\n", "\n", $value);
-									echo nl2br(str_replace("\n\n", "\n", $data->guidelines));
-									?></p>
+									echo nl2br(str_replace("\n\n", "\n", $value));
+									?>
+									</p>
 								</div>
 							</div>
 						</li>
