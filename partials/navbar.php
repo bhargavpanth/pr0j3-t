@@ -3,9 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
 		<title>rousticroutes.com</title>
-		<!-- <link rel="shortcut icon" href="../favicon.ico"> -->
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		
@@ -50,57 +49,19 @@
 							<div class="hrsub">
 								<div class="hrsub-inner"> 
 									<div id="cm">
-										<h4>Rustic India</h4>
+									<h4>COMING SOON !!</h4>
+										<!-- <h4>Rustic India</h4>
 										<ul>
 											<li><a href="#">Kerala</a></li>
 											<li><a href="#">Coorg</a></li>
 											<li><a href="#">Goa</a></li>
-										</ul>
+										</ul> -->
 									</div>
 								</div><!-- /cbp-hrsub-inner -->
 							</div><!-- /cbp-hrsub -->
 						</li>
 						<li>
 							<a href="#">Plan Your Weekend</a>
-							<!-- <div class="hrsub">
-								<div class="hrsub-inner">
-									<div id="cm">
-										<h4>Plan with us</h4>
-										<ul>
-											<li><a href="#">Learn Thai</a></li>
-											<li><a href="#">Math Genius</a></li>
-											<li><a href="#">Chemokid</a></li>
-										</ul>
-										<h4>Professionals</h4>
-										<ul>
-											<li><a href="#">Success 1.0</a></li>
-											<li><a href="#">Moneymaker</a></li>
-										</ul>
-									</div>
-									<div>
-										<h4>Entertainment</h4>
-										<ul>
-											<li><a href="#">Gadget Finder</a></li>
-											<li><a href="#">Green Tree Express</a></li>
-											<li><a href="#">Green Tree Pro</a></li>
-											<li><a href="#">Holy Cannoli</a></li>
-											<li><a href="#">Wobbler 3.0</a></li>
-											<li><a href="#">Coolkid</a></li>
-										</ul>
-									</div>
-									<div>
-										<h4>Games</h4>
-										<ul>
-											<li><a href="#">Catch the Bullet</a></li>
-											<li><a href="#">Snoopydoo</a></li>
-											<li><a href="#">Fallen Angel</a></li>
-											<li><a href="#">Sui Maker</a></li>
-											<li><a href="#">Wave Master</a></li>
-											<li><a href="#">Golf Pro</a></li>
-										</ul>
-									</div>
-								</div>
-							</div> -->
 						</li>
 						<li>
 							<a href="#">Resources</a>

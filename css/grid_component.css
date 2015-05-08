@@ -66,6 +66,7 @@ a:hover {
 	/*padding-left: 2px;*/
 	height: auto;
 	margin: 20px;
+	margin-bottom: 5px;
 }
 
 /* Flexbox is used for centering the heading */
