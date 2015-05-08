@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>OnRusticRoutes</title>
+	<link rel="shortcut icon" href="img/small_logo.png" />
+	<title>onrusticroutes.com</title>
 </head>
 <body>
 <?php require 'partials/navbar.php' ?>
