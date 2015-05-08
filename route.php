@@ -6,19 +6,23 @@
 		require_once("config.php");
 		mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
 		mysql_select_db($DB_NAME);
+		$des		=	mysql_real_escape_string($_GET["id"]);
 		$trekDate	=	mysql_real_escape_string($_POST['date']);
 		$firstName	=	mysql_real_escape_string($_POST['fname']); 
-		$lastName	=	mysql_real_escape_string($_POST['lname']); 
+		$sql="SELECT * FROM routes WHERE id=$des;";
+		$query=mysql_query($sql) or die(mysql_error());
+		$data=mysql_fetch_object($query);
+		$des=$data->title;
 		$email 		=	mysql_real_escape_string($_POST['email']);
 		$dob		=	mysql_real_escape_string($_POST['dob']);
 		$gender		=	mysql_real_escape_string($_POST['gender']);
 		$address	=	mysql_real_escape_string($_POST['mail']);
 		$city		=	mysql_real_escape_string($_POST['city']);
-		$state		=	mysql_real_escape_string($_POST['state']);
+		//$state		=	mysql_real_escape_string($_POST['state']);
 		$country	=	mysql_real_escape_string($_POST['country']);
 		$phoneNum	=	mysql_real_escape_string($_POST['mobile']);
 		$referal	=	mysql_real_escape_string($_POST['refereal']);
-		$sql		=	"INSERT INTO PlanYourWeekEnd (`fname`, `lname`, `email`, `dob`, `sex`, `address`, `city`, `state`, `country`, `mobile`, `referer`, `dateOfTrip`, `destination`) VALUES('$firstName', '$lastName', '$email', '$dob','$gender','$address','$city','$state','$country','$phoneNum','$referal','$trekDate','mallali');";
+		$sql		=	"INSERT INTO PlanYourWeekEnd (`fname`, `lname`, `email`, `dob`, `sex`, `address`, `city`, `state`, `country`, `mobile`, `referer`, `dateOfTrip`, `destination`) VALUES('$firstName', '', '$email', '$dob','$gender','$address','$city','','$country','$phoneNum','$referal','$trekDate','$des');";
 		if(mysql_query($sql)){
 			header("location:thankYou.php?success");
 		}else{
@@ -50,7 +54,7 @@
 				mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
 				mysql_select_db($DB_NAME);
 				$id		=	mysql_real_escape_string($_GET['id']);
-				$sql	=	"SELECT destinations.cover,routes.title,routes.type,routes.image,info.title,info.vital,info.brief,info.details,info.guidelines FROM routes,destinations,info WHERE routes.belongsTo=destinations.id AND routes.id=$id AND info.belongsTo=routes.id;";
+				$sql	=	"SELECT destinations.cover,routes.title,routes.type,routes.image,info.title,info.vital,info.brief,info.details,info.guidelines,info.intro FROM routes,destinations,info WHERE routes.belongsTo=destinations.id AND routes.id=$id AND info.belongsTo=routes.id;";
 				$query	=	mysql_query($sql);
 				$data	=	mysql_fetch_object($query);
 
@@ -65,8 +69,7 @@
 							<h3>Highlights</h3>
 							<div>
 								<div class="cbp-content">
-									<p><a href="">Day 1</a> <br> Arrival at Coorg Check in at resort <br> Jeep journey to falls <br> Trek and camp for night.</p>
-									<p><a href="">Day 2</a> <br> Return to resort and indulge in various activities aimed at all age groups</p>
+									<?php echo nl2br($data->vital."<hr>".$data->intro."<hr>".$data->brief); ?>
 								</div>
 							</div>
 						</li>
@@ -107,7 +110,7 @@
 
 						<li id="slide4">
 							<h3>Register for the trip</h3>
-							<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+							<form action="<?php echo $_SERVER['PHP_SELF']; ?>?id=<?php echo $_GET['id']; ?>" method="post">
 								<table>
 									<tr>
 										<td>
