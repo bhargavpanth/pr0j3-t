@@ -61,7 +61,7 @@
 							</div><!-- /cbp-hrsub -->
 						</li>
 						<li>
-							<a href="#">Plan Your Weekend</a>
+							<a href="#">Plan Your Trip</a>
 						</li>
 						<li>
 							<a href="#">Resources</a>
@@ -79,16 +79,21 @@
 						</li>
 						<li>
 							<a href="#">Contact Us</a>
-<!-- 							<div class="hrsub">
+							<div class="hrsub">
 								<div class="hrsub-inner"> 
 									<div id="cm">
 										<h4>Get in touch with us</h4>
 										<ul>
-											<li>Email us at: <a href="#"><br>something@rusticroutes.com</a></li>
-											<li>Call us at: <a href="#"><br>+9123456788</a></li>
+											<li style="color:#efebe5">Email us at: <a href="mailto:hello@rusticroutes.com"><br>hello@rusticroutes.com</a></li>
+											<li style="color:#efebe5">Call us at: <a href="#"><br>+91-9483128206/7022617122</a></li>
+											<div style="display:inline;">
+												<a href="https://www.facebook.com/onrusticroutes" style="padding-left: 20px;"><img src="../img/facebook.png" alt="facebook"></a>
+												<a href="https://wwww.twitter.com/onrusticroutes" style="padding-left: 20px;"><img src="../img/twitter.png" alt="twitter"></a>
+												<a href="https://www.instagram.com/on_rustic_routes" style="padding-left: 20px;"><img src="../img/instagram.png" alt="instagram"></a>
+											</div>
 										</ul>
 								</div></cbp-hrsub-inner
-							</div> /cbp-hrsub --> 						
+							</div> /cbp-hrsub 						
 						</li>
  
 					</ul>

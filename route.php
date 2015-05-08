@@ -1,11 +1,14 @@
 <?php
+
+// Remove : $lastName, $state,
+// Add : Make $firstName to $Name 
 	if(isset($_POST['submit'])){
 		require_once("config.php");
 		mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
 		mysql_select_db($DB_NAME);
 		$trekDate	=	mysql_real_escape_string($_POST['date']);
-		$firstName	=	mysql_real_escape_string($_POST['fname']);
-		$lastName	=	mysql_real_escape_string($_POST['lname']);
+		$firstName	=	mysql_real_escape_string($_POST['fname']); 
+		$lastName	=	mysql_real_escape_string($_POST['lname']); 
 		$email 		=	mysql_real_escape_string($_POST['email']);
 		$dob		=	mysql_real_escape_string($_POST['dob']);
 		$gender		=	mysql_real_escape_string($_POST['gender']);
@@ -117,21 +120,21 @@
 
 									<tr>
 										<td>
-											<label for="fname">First Name</label>
+											<label for="fname">Name</label>
 										</td>
 										<td>
 											<input type="text" id="fname" name="fname">
 										</td>
 									</tr>
 									
-									<tr>
+<!-- 									<tr>
 										<td>
 											<label for="lname">Last Name</label>
 										</td>
 										<td>
 											<input type="text" id="lname" name="lname">
 										</td>
-									</tr>
+									</tr> -->
 
 									<tr>
 										<td>
@@ -167,10 +170,10 @@
 										<td><input type="text" name="city" id="city"></td>
 									</tr>
 
-									<tr>
+									<!-- <tr>
 										<td><label for="">State</label></td>
 										<td><input type="text" name="state" id="state"></td>
-									</tr>
+									</tr> -->
 
 									<tr>
 										<td><label for="">Country</label></td>
@@ -185,8 +188,10 @@
 									<tr>
 										<td><label for="">Referal</label></td>
 										<td><select name="refereal" id="referal">
-											<option value="newspaper">Newspaper</option>
+											<option value="newspaper">Media</option>
 											<option value="friends">Friends</option>
+											<option value="social">Social Media</option>
+											<option value="newsletter">News Letter</option>
 										</select></td>
 									</tr>
 									
