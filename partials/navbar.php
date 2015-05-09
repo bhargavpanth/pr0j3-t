@@ -74,8 +74,8 @@
 											<li><a target="_blank" href="//blog.onrusticroutes.com">Food Blog</a></li>
 										</ul>
 									</div>
-								</div><!-- /cbp-hrsub-inner -->
-							</div><!-- /cbp-hrsub -->
+								</div>
+							</div>
 						</li>
 						<li>
 							<a href="#">Contact Us</a>
@@ -92,8 +92,8 @@
 												<a href="https://www.instagram.com/on_rustic_routes" style="padding-left: 20px;"><img src="../img/instagram.png" alt="instagram"></a>
 											</div>
 										</ul>
-								</div></cbp-hrsub-inner
-							</div> /cbp-hrsub 						
+								</div>
+							</div>
 						</li>
  
 					</ul>

@@ -6,8 +6,8 @@
 	<title>onrustiroutes.com</title>
 </head>
 <body>
-	<?php require 'partials/navbar.php' ?>		
-		<h3 style="padding-top:150px; text-align:center;">PLAN YOUR TRIP</h3>
+		<?php require 'partials/navbar.php' ?>
+		<h3 style="padding-top:20px; text-align:center;">PLAN YOUR TRIP</h3>
 			<div>
 				<form action="" method="post">
 								<table align="center">
@@ -116,7 +116,7 @@
 									</tr>
 
 									<td>
-	<br><br><br>									<td><input type="submit" name="submit" value="Submit"></td>
+	<!--  -->									<td><input type="submit" name="submit" value="Submit"></td>
 									</td>
 
 								</table>
