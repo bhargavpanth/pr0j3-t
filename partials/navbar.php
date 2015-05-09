@@ -70,8 +70,8 @@
 									<div id="cm">
 										<h4>Blogs</h4>
 										<ul>
-											<li><a href="#">Travel Blog</a></li>
-											<li><a href="#">Food Blog</a></li>
+											<li><a target="_blank" href="//blog.onrusticroutes.com">Travel Blog</a></li>
+											<li><a target="_blank" href="//blog.onrusticroutes.com">Food Blog</a></li>
 										</ul>
 									</div>
 								</div><!-- /cbp-hrsub-inner -->
