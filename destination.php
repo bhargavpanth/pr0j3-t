@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/grid_component.css" />
 </head>
 <body>
-	<?php require 'partials/navbar.php' ?> <br><br><br><br><br>
+	<?php require 'partials/navbar.php' ?>
 	<?php
 		$route=$_GET['id'];
 		require_once("config.php");
