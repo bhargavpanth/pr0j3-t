@@ -1,3 +1,46 @@
+<?php
+	if(isset($_POST['submit'])){
+		echo "<pre>";
+		$name				=		$_POST['name'];
+		$email				=		$_POST['email'];
+		$phone 				=		$_POST['phone'];
+		$groupSize 			=		$_POST['group_size'];
+		$duration 			=		$_POST['duration'];
+		$ageGroup			=		$_POST['age_group'];
+		$origin				=		$_POST['origin'];
+		$budget				=		$_POST['budget'];
+		$interests			=		$_POST['interest'];
+		$interests			=		implode("|", $interests);
+		$interest_other		=		$_POST['interest_other'];
+		$interests			=		$interests."%".$interest_other;
+		$destinationPref	=		$_POST['destination_preferences'];
+		$destination_other	=		$_POST['destination_other'];		
+		$destinationPref	=		implode("|", $destinationPref);
+		$destinationPref 	=		$destinationPref."%".$destination_other;
+		$acomodationPref	=		$_POST['acomodation_pref'];
+		$acomodationPref	=		implode("|", $acomodationPref);
+		//get the data properly
+
+		require_once("config.php");
+		// connect to a database
+		$con				=		mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
+
+		//select our database
+		mysql_select_db($DB_NAME);
+
+		//write a query
+		$sql				=		"INSERT INTO `rustic`.`planYourTrip` (`name`, `email`, `phone`, `groupSize`, `duration`, `ageGroup`, `origin`, `budget`, `interests`, `destinationPref`, `acomodationPref`) VALUES ('$name', '$email', '$phone', '$groupSize', '$duration', '$ageGroup', '$origin', '$budget', '$interests', '$destinationPref', '$acomodationPref');";
+		// execute that query
+		$query				=		mysql_query($sql);
+
+		if($query){
+			header("location:thankYou.php?success");
+		}else{
+			header("location:thankYou.php?fail");
+		}
+
+	}else{
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +52,7 @@
 		<?php require 'partials/navbar.php' ?>
 		<h3 style="padding-top:20px; text-align:center;">PLAN YOUR TRIP</h3>
 			<div>
-				<form action="" method="post">
+				<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 								<table align="center">
 									<tr>
 										<td>
@@ -49,7 +92,7 @@
 									</tr>
 									<tr>
 										<td><label for="">Duration of travel *</label></td>
-										<td><select name="group_size" id="group_size">
+										<td><select name="duration">
 											<option value="weekend">Weekend</option>
 											<option value="zero-four">0-4 Days</option>
 											<option value="four-seven">4-7 Days</option>
@@ -59,7 +102,7 @@
 								
 									<tr>
 										<td><label for="">Average age group *</label></td>
-										<td><select name="group_size" id="group_size">
+										<td><select name="age_group">
 											<option value="eighteen">18-22 years</option>
 											<option value="twenty-two">22-28 years</option>
 											<option value="twenty-eight">28-35 years</option>
@@ -78,41 +121,41 @@
 									<tr>
 										<td><label for="">What interests you? *</label></td>
 										<td>
-										<input type="checkbox" id="adventure" name="adventure">Adventure</input><br>
-										<input type="checkbox" id="trekking" name="trekking">Trekking</input><br>
-										<input type="checkbox" id="road trip" name="road trip">Road Trip</input><br>
-										<input type="checkbox" id="relaxation" name="relaxation">Relaxation</input><br>
-										<input type="checkbox" id="other" name="other">Other</input>
-										<input type="text" id="other-text" name="other-text">
+										<input type="checkbox" id="adventure" value="adventure" name="interest[]" />Adventure<br>
+										<input type="checkbox" id="trekking" value="trekking" name="interest[]" />Trekking<br>
+										<input type="checkbox" id="road trip" value="road trip" name="interest[]" />Road Trip<br>
+										<input type="checkbox" id="relaxation" value="relaxation" name="interest[]" />Relaxation<br>
+										Other
+										<input type="text" id="other-text" value="adventure" name="interest_other" />
 										</td>
 									</tr>
 
 									<tr>
 										<td><label for="">Destination preferences *</label></td>
 										<td>
-										<input type="checkbox" id="hill-station" name="hill-station">Hill Station</input><br>
-										<input type="checkbox" id="beach-ocean" name="beach-ocean">Beach/Ocean</input><br>
-										<input type="checkbox" id="mountain" name="mountain">Mountain</input><br>
-										<input type="checkbox" id="heritage" name="heritage">Heritage</input><br>
-										<input type="checkbox" id="wildlife" name="wildlife">Wildlife</input><br>
-										<input type="checkbox" id="other-2" name="other-2">Other</input>
-										<input type="text" id="other2-text" name="other2-text">
+										<input type="checkbox" value="Hill Station" id="hill-station" name="destination_preferences[]" />Hill Station<br>
+										<input type="checkbox" value="Beach/Ocean" id="beach-ocean" name="destination_preferences[]" />Beach/Ocean<br>
+										<input type="checkbox" value="Mountain" id="mountain" name="destination_preferences[]" />Mountain<br>
+										<input type="checkbox" value="Heritage" id="heritage" name="destination_preferences[]" />Heritage<br>
+										<input type="checkbox" value="Wildlife" id="wildlife" name="destination_preferences[]" />Wildlife<br>
+										Other
+										<input type="text" name="destination_other" />
 										</td>
 									</tr>									
 
 									<tr>
 										<td><label for="">Accomodation preferences *</label></td>
 										<td>
-										<input type="checkbox" id="hotel" name="hotel">Hotel</input><br>
-										<input type="checkbox" id="budget" name="budget">Budget Hotel</input><br>
-										<input type="checkbox" id="resort" name="resort">Resort</input><br>
-										<input type="checkbox" id="camping" name="camping">Camping</input><br>
-										<input type="checkbox" id="nomadic" name="nomadic">Nomadic</input><br>
+										<input type="checkbox" id="hotel" name="acomodation_pref[]" value="hotel" />Hotel<br>
+										<input type="checkbox" id="budget" name="acomodation_pref[]" value="budget" />Budget Hotel<br>
+										<input type="checkbox" id="resort" name="acomodation_pref[]" value="resort" />Resort<br>
+										<input type="checkbox" id="camping" name="acomodation_pref[]" value="camping" />Camping<br>
+										<input type="checkbox" id="nomadic" name="acomodation_pref[]" value="nomadic" />Nomadic<br>
 										</td>
 									</tr>
 									
 									<tr>
-										<td></td><td><label for=""><bold>By choosing the trip, you are accepting the terms and conditions</bold></label></td>
+										<td></td><td><label for=""><b>By choosing the trip, you are accepting the terms and conditions</b></label></td>
 									</tr>
 
 									<td>
@@ -125,3 +168,4 @@
 	<?php require 'partials/footer.php' ?>
 </body>
 </html>
+<?php } ?>
