@@ -20,7 +20,7 @@
 	<ul class="grid">
 	
 				<div style="padding: 0 25px;">
-				<li><a href="route.php?id=22"><img src="img/Grid/Kardung La.jpg" style='width:100%;' border="0" alt="" ><div><h3 style="text-transform:capitalize !important;">Cycle to the highest motorable peak - Kardung La</h3></div></a></li>
+				<li style="margin-bottom:15px;margin-left:0px;"><a href="route.php?id=22"><img src="img/Grid/Kardung La.jpg" style='width:100%;' border="0" alt="" ><div><h3 style="text-transform:capitalize !important;">Cycle to the highest motorable peak - Kardung La</h3></div></a></li>
 				</div>
 				<li><a href="/destination.php?id=HimanchalPradesh"><img src="img/Grid/Spiti Grid left.png" style='width:100%; padding-top:0' border="0" alt=""><div><h3 style="text-transform:capitalize">trek the himalayas</h3></div></a></li>
 				<li><a href="/destination.php?id=Coorg"><img src="img/Grid/Coorg grid mid.png" style='width:100%; ' border="0" alt=""><div><h3  style="text-transform:capitalize">off the map in coorg</h3></div></a></li>

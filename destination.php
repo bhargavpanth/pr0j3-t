@@ -22,7 +22,6 @@
 	?>
 	<img src="<?php echo $data->cover; ?>" style="width:100%;" height="450" alt="cover">
 	<hr>
-	
 		<center>
 		<?php
 			$route=$_GET['id'];
