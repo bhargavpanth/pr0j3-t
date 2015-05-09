@@ -8,7 +8,7 @@
 		 <!-- <li><a href="#"><img src="../img/thumbs/manali.png" style='width:100%;' border="0" alt="cover" /><div><h3>Hampi</h3></div></a></li> -->
 		 <?php
 		 	$codeName=$_GET['id'];
-		 	require_once("config.php");
+		 	require_once("../config.php");
 		 	$con=mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
 		 	mysql_select_db($DB_NAME);
 		 	$codeName=mysql_real_escape_string($codeName);
