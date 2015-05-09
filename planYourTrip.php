@@ -118,7 +118,9 @@
 									<td>
 	<br><br><br>									<td><input type="submit" name="submit" value="Submit"></td>
 									</td>
+
 								</table>
+			</form>
 			</div>
 	<?php require 'partials/footer.php' ?>
 </body>
