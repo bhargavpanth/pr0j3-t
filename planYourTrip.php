@@ -126,7 +126,7 @@
 										<input type="checkbox" id="road trip" value="road trip" name="interest[]" />Road Trip<br>
 										<input type="checkbox" id="relaxation" value="relaxation" name="interest[]" />Relaxation<br>
 										Other
-										<input type="text" id="other-text" value="adventure" name="interest_other" />
+										<input type="text" id="other-text" value="" name="interest_other" />
 										</td>
 									</tr>
 
