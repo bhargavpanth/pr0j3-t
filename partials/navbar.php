@@ -61,7 +61,7 @@
 							</div><!-- /cbp-hrsub -->
 						</li>
 						<li>
-							<a href="#">Plan Your Trip</a>
+							<a href="planYourTrip.php" onclick="window.location='planYourTrip.php'">Plan Your Trip</a>
 						</li>
 						<li>
 							<a href="#">Resources</a>
