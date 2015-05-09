@@ -25,7 +25,7 @@
 										<h4>Destinations</h4>
 										<ul>
 											<?php
-												require_once("../config.php");
+												require_once("config.php");
 												$con=mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
 												mysql_select_db($DB_NAME);
 												$sql="SELECT * FROM destinations;";
