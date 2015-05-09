@@ -46,8 +46,8 @@
 	</head>
 	<body>
 		<div class="container">
-		<br><br><br><br>
-			<div class="main"><br>
+		<!-- <br><br><br><br> -->
+			<div class="main">
 			<center>
 			<?php
 				require_once("config.php");
@@ -111,7 +111,7 @@
 						<li id="slide4">
 							<h3>Register for the trip</h3>
 							<form action="<?php echo $_SERVER['PHP_SELF']; ?>?id=<?php echo $_GET['id']; ?>" method="post">
-								<table>
+								<table align="center">
 									<tr>
 										<td>
 											<label for="">Trek Batch</label>
@@ -130,15 +130,6 @@
 										</td>
 									</tr>
 									
-<!-- 									<tr>
-										<td>
-											<label for="lname">Last Name</label>
-										</td>
-										<td>
-											<input type="text" id="lname" name="lname">
-										</td>
-									</tr> -->
-
 									<tr>
 										<td>
 											<label for="">Email</label>
@@ -172,11 +163,6 @@
 										<td><label for="">City</label></td>
 										<td><input type="text" name="city" id="city"></td>
 									</tr>
-
-									<!-- <tr>
-										<td><label for="">State</label></td>
-										<td><input type="text" name="state" id="state"></td>
-									</tr> -->
 
 									<tr>
 										<td><label for="">Country</label></td>
