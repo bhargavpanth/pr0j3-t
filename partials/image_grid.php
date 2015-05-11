@@ -78,11 +78,6 @@
 
 		 	}
 		 ?>
-
 		
-		
-	<!-- </div> -->
-<!-- 		<li><a href="#"><img src="../img/thumbs/ker.png" style='width:100%' border="0" alt=""><div><h3>Goa</h3></div></a></li>
-		<li><a href="#"><img src="../img/thumbs/ker.png" style='width:100%' border="0" alt=""><div><h3>Goa</h3></div></a></li> -->			
 	</ul>
 	</div>

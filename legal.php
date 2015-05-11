@@ -8,14 +8,16 @@
 <body>
 <?php require 'partials/navbar.php' ?>
 
+<!-- <div style="position:fixed; left:auto; background-color:#efebe5; padding-bottom: 13px;"> -->
 <div style="padding-top:20px;"> <center>
 	<a class="searchlegal" href="#" data-target="tc" style="color:#cc682c; padding: 0 20px;">Terms and Conditions</a>
 	<a class="searchlegal" href="#" data-target="va" style="color:#cc682c; padding: 0 20px;">Vistor Agreement</a>
 	<a class="searchlegal" href="#" data-target="pp" style="color:#cc682c; padding: 0 20px;">Privacy Policy</a></center>
 </div>
+<!-- </div> -->
 
 <!-- T&C -->
-<div style="margin-left:100px; margin-right:100px;">
+<div style="margin-top: 50px; margin-left:100px; margin-right:100px;">
 <div id="tc">
 	<h3>GENERAL CONDITIONS AND GUIDELINES FOR TRAVEL ARRANGEMENTS</h3>
 	<h5>General Conditions</h5>
