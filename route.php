@@ -46,7 +46,7 @@
 	</head>
 	<body>
 		<div class="container">
-		<!-- <br><br><br><br> -->
+	
 			<div class="main">
 			<center>
 			<?php
@@ -59,7 +59,7 @@
 				$data	=	mysql_fetch_object($query);
 
 			?>
-			<img id="image" src="<?php echo $data->cover;?>" style='width:100%;' height="450" border="0" alt="cover">
+			<img id="image" src="<?php echo $data->cover;?>" style='width:auto;' height="450" border="0" alt="cover">
 			</center>
 			<hr>
 				<div id="cbp-contentslider" class="cbp-contentslider">
@@ -189,7 +189,7 @@
 									</tr>
 
 									<td>
-										<td><input type="submit" name="submit" value="Submit"></td>
+										<td><input type="submit" name="submit" value="Submit" style="border:3px solid #ebefe5;padding: 20px 40px; display: inline-block; margin: 15px 30px; text-transform: uppercase; letter-spacing: 1px;"></td>
 									</td>
 								</table>
 								<br>

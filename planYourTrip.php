@@ -110,7 +110,7 @@
 										</select></td>
 									</tr>
 									<tr>
-										<td><label for="">City of origin of travel *</label></td>
+										<td><label for="">City of origin *</label></td>
 										<td><input type="text" id="origin" name="origin"></td>
 									</tr>
 									<tr>
@@ -133,11 +133,11 @@
 									<tr>
 										<td><label for="">Destination preferences *</label></td>
 										<td>
-										<input type="checkbox" value="Hill Station" id="hill-station" name="destination_preferences[]" />Hill Station<br>
-										<input type="checkbox" value="Beach/Ocean" id="beach-ocean" name="destination_preferences[]" />Beach/Ocean<br>
-										<input type="checkbox" value="Mountain" id="mountain" name="destination_preferences[]" />Mountain<br>
+										<input type="checkbox" value="Hill Station" id="hill-station" name="destination_preferences[]" />Hill Station/Mountain Ranges<br>
+										<input type="checkbox" value="Beach/Ocean" id="beach-ocean" name="destination_preferences[]" />Coastals<br>
+										<!-- <input type="checkbox" value="Mountain" id="mountain" name="destination_preferences[]" />Mountain<br> -->
 										<input type="checkbox" value="Heritage" id="heritage" name="destination_preferences[]" />Heritage<br>
-										<input type="checkbox" value="Wildlife" id="wildlife" name="destination_preferences[]" />Wildlife<br>
+										<input type="checkbox" value="Wildlife" id="wildlife" name="destination_preferences[]" />Jungle/Wildlife<br>
 										Other
 										<input type="text" name="destination_other" />
 										</td>
@@ -147,10 +147,10 @@
 										<td><label for="">Accomodation preferences *</label></td>
 										<td>
 										<input type="checkbox" id="hotel" name="acomodation_pref[]" value="hotel" />Hotel<br>
-										<input type="checkbox" id="budget" name="acomodation_pref[]" value="budget" />Budget Hotel<br>
+										<input type="checkbox" id="budget" name="acomodation_pref[]" value="budget" />Budget Stay<br>
 										<input type="checkbox" id="resort" name="acomodation_pref[]" value="resort" />Resort<br>
 										<input type="checkbox" id="camping" name="acomodation_pref[]" value="camping" />Camping<br>
-										<input type="checkbox" id="nomadic" name="acomodation_pref[]" value="nomadic" />Nomadic<br>
+										<input type="checkbox" id="nomadic" name="acomodation_pref[]" value="nomadic" />Homestay<br>
 										</td>
 									</tr>
 									
@@ -159,7 +159,7 @@
 									</tr>
 
 									<td>
-	<!--  -->									<td><input type="submit" name="submit" value="Submit"></td>
+	<!--  -->									<td><input type="submit" name="submit" value="Submit" style="border:3px solid #ebefe5;padding: 20px 40px; display: inline-block; margin: 15px 30px; text-transform: uppercase; letter-spacing: 1px;"></td>
 									</td>
 
 								</table>

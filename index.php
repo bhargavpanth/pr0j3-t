@@ -8,7 +8,7 @@
 			<div id="cover">
 			<center>
 			
-				<img src="img/cover.jpg" style='width:100%;' border="0" alt="cover">
+				<img src="img/cover.jpg" style='width:auto;' border="0" alt="cover">
 			
 			</center>
 			</div>			 
