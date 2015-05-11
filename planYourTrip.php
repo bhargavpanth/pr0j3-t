@@ -59,7 +59,7 @@
 											<label for="">Name (Individual/Company) *</label>
 										</td>
 										<td>
-											<input type="text" name="name">
+											<input type="text" name="name" required="true">
 										</td>
 									</tr>
 									<br>
@@ -68,7 +68,7 @@
 											<label for="fname">Email ID *</label>
 										</td>
 										<td>
-											<input type="text" id="email" name="email">
+											<input type="text" id="email" name="email" required="true">
 										</td>
 									</tr>
 
@@ -83,7 +83,7 @@
 
 									<tr>
 										<td><label for="">Group Size *</label></td>
-										<td><select name="group_size" id="group_size">
+										<td><select name="group_size" id="group_size" required="true">
 											<option value="solo">Solo/Couple</option>
 											<option value="five">Upto Five</option>
 											<option value="ten">Five to Ten</option>
@@ -92,7 +92,7 @@
 									</tr>
 									<tr>
 										<td><label for="">Duration of travel *</label></td>
-										<td><select name="duration">
+										<td><select name="duration" required="true">
 											<option value="weekend">Weekend</option>
 											<option value="zero-four">0-4 Days</option>
 											<option value="four-seven">4-7 Days</option>
@@ -102,7 +102,7 @@
 								
 									<tr>
 										<td><label for="">Average age group *</label></td>
-										<td><select name="age_group">
+										<td><select name="age_group" required="true">
 											<option value="eighteen">18-22 years</option>
 											<option value="twenty-two">22-28 years</option>
 											<option value="twenty-eight">28-35 years</option>
@@ -111,11 +111,11 @@
 									</tr>
 									<tr>
 										<td><label for="">City of origin *</label></td>
-										<td><input type="text" id="origin" name="origin"></td>
+										<td><input type="text" id="origin" name="origin" required="true"></td>
 									</tr>
 									<tr>
 										<td><label for="">Budget for trip *</label></td>
-										<td><input type="text" name="budget" id="budget"></td>
+										<td><input type="text" name="budget" id="budget" required="true"></td>
 									</tr>
 
 									<tr>

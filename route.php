@@ -117,7 +117,7 @@
 											<label for="">Trek Batch</label>
 										</td>
 										<td>
-											<input type="date" name="date">
+											<input type="date" name="date" required="true">
 										</td>
 									</tr>
 
@@ -126,7 +126,7 @@
 											<label for="fname">Name</label>
 										</td>
 										<td>
-											<input type="text" id="fname" name="fname">
+											<input type="text" id="fname" name="fname" required="true">
 										</td>
 									</tr>
 									
@@ -135,19 +135,19 @@
 											<label for="">Email</label>
 										</td>
 										<td>
-											<input type="text" id="email" name="email">
+											<input type="text" id="email" name="email" required="true">
 										</td>
 									</tr>
 
 									<tr>
 										<td><label for="">Date of Birth</label></td>
-										<td><input type="date" id="dob" name="dob"></td>
+										<td><input type="date" id="dob" name="dob" required="true"></td>
 									</tr>
 									
 									<tr>
 										<td><label for="">Gender</label></td>
 										<td>
-										<select name="gender" id="gender">
+										<select name="gender" id="gender" required="true">
 										<option value="male">Male</option>
 										<option value="female">Female</option>
 										</select>
@@ -156,27 +156,27 @@
 
 									<tr>
 										<td><label for="">Mailing Address</label></td>
-										<td><textarea name="mail" id="mail" cols="30" rows="10"></textarea></td>
+										<td><textarea name="mail" id="mail" cols="30" rows="10" required="true"></textarea></td>
 									</tr>
 
 									<tr>
 										<td><label for="">City</label></td>
-										<td><input type="text" name="city" id="city"></td>
+										<td><input type="text" name="city" id="city" required="true"></td>
 									</tr>
 
 									<tr>
 										<td><label for="">Country</label></td>
-										<td><input type="text" id="country" name="country"></td>
+										<td><input type="text" id="country" name="country" required="true"></td>
 									</tr>
 
 									<tr>
 										<td><label for="">Mobile</label></td>
-										<td><input name="mobile" type="text"></td>
+										<td><input name="mobile" type="text" required="true"></td>
 									</tr>
 
 									<tr>
 										<td><label for="">Referal</label></td>
-										<td><select name="refereal" id="referal">
+										<td><select name="refereal" id="referal" required="true">
 											<option value="newspaper">Media</option>
 											<option value="friends">Friends</option>
 											<option value="social">Social Media</option>
