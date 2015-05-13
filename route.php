@@ -69,7 +69,9 @@
 							<h3>Highlights</h3>
 							<div>
 								<div class="cbp-content">
-									<?php echo nl2br($data->vital."<hr>".$data->intro."<hr>".$data->brief); ?>
+									<p>
+										<?php echo nl2br($data->vital."</p><hr><p>".$data->intro."</p><hr><p>".$data->brief); ?>
+									</p>
 								</div>
 							</div>
 						</li>
