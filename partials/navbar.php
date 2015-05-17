@@ -7,6 +7,9 @@
 		<title>onrusticroutes</title>
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script>
+			document.title="onrusticroutes";
+		</script>
 		
 	</head>
 	<header>
