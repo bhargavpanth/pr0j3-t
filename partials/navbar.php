@@ -90,9 +90,9 @@
 											<li style="color:#efebe5">Email us at: <a href="mailto:hello@rusticroutes.com"><br>hello@rusticroutes.com</a></li>
 											<li style="color:#efebe5">Call us at: <a href="#"><br>+91-9483128206/7022617122</a></li>
 											<div style="display:inline;">
-												<a href="https://www.facebook.com/onrusticroutes" style="padding-left: 20px;"><img src="../img/facebook.png" alt="facebook"></a>
-												<a href="https://wwww.twitter.com/onrusticroutes" style="padding-left: 20px;"><img src="../img/twitter.png" alt="twitter"></a>
-												<a href="https://www.instagram.com/on_rustic_routes" style="padding-left: 20px;"><img src="../img/instagram.png" alt="instagram"></a>
+												<a href="https://www.facebook.com/onrusticroutes" target="_blank" style="padding-left: 20px;"><img src="../img/facebook.png" alt="facebook"></a>
+												<a href="https://wwww.twitter.com/onrusticroutes" target="_blank" style="padding-left: 20px;"><img src="../img/twitter.png" alt="twitter"></a>
+												<a href="https://www.instagram.com/on_rustic_routes" target="_blank" style="padding-left: 20px;"><img src="../img/instagram.png" alt="instagram"></a>
 											</div>
 										</ul>
 								</div>
