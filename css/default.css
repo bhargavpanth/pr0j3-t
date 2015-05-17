@@ -3,7 +3,7 @@
 body{
 	min-width: 1170px;
 }
-body, html { font-size: 100%; 	padding: 0; margin: 0;}
+body, html { font-size: 100%; 	padding: 0; margin: 0; background-color: #efebe5;}
 /* Reset */
 *,
 *:after,
