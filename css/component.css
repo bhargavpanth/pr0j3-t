@@ -63,6 +63,7 @@ hr {
 #cm > ul > li > a:hover { color: #32231d;}
 
 .hrmenu > ul > li > a:hover {
+	width: 100%;
 	-webkit-transition: all .3s ease-in;
 	transition: all .3s ease-in;
 	color: #cc682c;
@@ -78,6 +79,7 @@ hr {
 
 /* sub-menu */
 .hrmenu .hrsub {
+	min-width: 1270px;
 	display: none;
 	position: absolute;
 	/*background: #cc682c;*/
