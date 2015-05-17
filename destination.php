@@ -20,7 +20,7 @@
 
 
 	?>
-	<img src="<?php echo $data->cover; ?>" style="width:100%;" height="450" alt="cover">
+	<img src="<?php echo $data->cover; ?>" style='width:auto;' height="450" alt="cover">
 	<hr>
 		<center>
 		<?php
