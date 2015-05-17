@@ -54,7 +54,7 @@
 				mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
 				mysql_select_db($DB_NAME);
 				$id		=	mysql_real_escape_string($_GET['id']);
-				$sql	=	"SELECT destinations.cover,routes.title,routes.type,routes.image,info.title,info.vital,info.brief,info.details,info.guidelines,info.intro FROM routes,destinations,info WHERE routes.belongsTo=destinations.id AND routes.id=$id AND info.belongsTo=routes.id;";
+				$sql	=	"SELECT destinations.cover,routes.title,routes.type,routes.image,info.title as tit,info.vital,info.brief,info.details,info.guidelines,info.intro FROM routes,destinations,info WHERE routes.belongsTo=destinations.id AND routes.id=$id AND info.belongsTo=routes.id;";
 				$query	=	mysql_query($sql);
 				$data	=	mysql_fetch_object($query);
 
@@ -62,6 +62,9 @@
 			<img id="image" src="<?php echo $data->cover;?>" style='width:auto;' height="450" border="0" alt="cover">
 			</center>
 			<hr>
+			<h2 style="text-align:center"><?php
+				echo $data->tit;
+			?></h2>
 				<div id="cbp-contentslider" class="cbp-contentslider">
 					<ul>
 
