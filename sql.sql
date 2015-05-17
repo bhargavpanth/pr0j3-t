@@ -72,7 +72,7 @@ CREATE TABLE `destinations` (
 
 LOCK TABLES `destinations` WRITE;
 /*!40000 ALTER TABLE `destinations` DISABLE KEYS */;
-INSERT INTO `destinations` VALUES (1,'Himanchal Pradesh','HimanchalPradesh','img/Himachal/CoverHimachal.png'),(2,'Coorg','Coorg','img/Coorg/Cover2.png'),(3,'Goa','Goa','img/Goa/Cover2.png'),(4,'Hampi','Hampi','img/Hampi/Cover2.png');
+INSERT INTO `destinations` VALUES (1,'Himachal Pradesh','HimachalPradesh','img/Himachal/CoverHimachal.png'),(2,'Coorg','Coorg','img/Coorg/Cover2.png'),(3,'Goa','Goa','img/Goa/Cover2.png'),(4,'Hampi','Hampi','img/Hampi/Cover2.png');
 /*!40000 ALTER TABLE `destinations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,4 +179,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-18  0:12:11
+-- Dump completed on 2015-05-18  0:15:50
