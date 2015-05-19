@@ -16,6 +16,10 @@
 		$route=mysql_real_escape_string($route);
 		$sql="SELECT cover FROM destinations WHERE codeName='$route'";
 		$query=mysql_query($sql);
+		if(mysql_num_rows($query)==0){
+			header("location:404.php");
+			die();
+		}
 		$data=mysql_fetch_object($query);
 
 
