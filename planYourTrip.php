@@ -1,29 +1,40 @@
 <?php
 	if(isset($_POST['submit'])){
-		echo "<pre>";
-		$name				=		$_POST['name'];
-		$email				=		$_POST['email'];
-		$phone 				=		$_POST['phone'];
-		$groupSize 			=		$_POST['group_size'];
-		$duration 			=		$_POST['duration'];
-		$ageGroup			=		$_POST['age_group'];
-		$origin				=		$_POST['origin'];
-		$budget				=		$_POST['budget'];
-		$interests			=		$_POST['interest'];
+		require_once("config.php");
+		$con				=		mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
+
+		$name				=		mysql_real_escape_string($_POST['name']);
+		$email				=		mysql_real_escape_string($_POST['email']);
+		$phone 				=		mysql_real_escape_string($_POST['phone']);
+		$groupSize 			=		mysql_real_escape_string($_POST['group_size']);
+		$duration 			=		mysql_real_escape_string($_POST['duration']);
+		$ageGroup			=		mysql_real_escape_string($_POST['age_group']);
+		$origin				=		mysql_real_escape_string($_POST['origin']);
+		$budget				=		mysql_real_escape_string($_POST['budget']);
+		$interests			=		mysql_real_escape_string($_POST['interest']);
+		if($interests==null){
+			header("location:planYourTrip.php?fail=Interests not filled");
+			die();
+		}
 		$interests			=		implode("|", $interests);
-		$interest_other		=		$_POST['interest_other'];
+		$interest_other		=		mysql_real_escape_string($_POST['interest_other']);
 		$interests			=		$interests."%".$interest_other;
-		$destinationPref	=		$_POST['destination_preferences'];
-		$destination_other	=		$_POST['destination_other'];		
+		$destinationPref	=		mysql_real_escape_string($_POST['destination_preferences']);
+		if($destinationPref==null){
+			header("location:planYourTrip.php?fail=Destination Preferences not filled");
+			die();
+		}
+		$destination_other	=		mysql_real_escape_string($_POST['destination_other'])	;
 		$destinationPref	=		implode("|", $destinationPref);
 		$destinationPref 	=		$destinationPref."%".$destination_other;
-		$acomodationPref	=		$_POST['acomodation_pref'];
+		$acomodationPref	=		mysql_real_escape_string($_POST['acomodation_pref']);
+		if($acomodationPref==null){
+			header("location:planYourTrip.php?fail=Acomodation Preferences not filled");
+			die();
+		}
 		$acomodationPref	=		implode("|", $acomodationPref);
 		//get the data properly
-
-		require_once("config.php");
 		// connect to a database
-		$con				=		mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
 
 		//select our database
 		mysql_select_db($DB_NAME);
@@ -51,6 +62,9 @@
 <body>
 		<?php require 'partials/navbar.php' ?>
 		<h3 style="padding-top:20px; text-align:center;">PLAN YOUR TRIP</h3>
+		<h4 style="padding-top:20px; text-align:center; color:red;"><?php if (isset($_GET['fail'])) {
+			echo $_GET['fail'];
+		} ?></h4>
 			<div>
 				<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 								<table align="center">
@@ -68,7 +82,7 @@
 											<label for="fname">Email ID *</label>
 										</td>
 										<td>
-											<input type="text" id="email" name="email" required="true">
+											<input type="email" id="email" name="email" required="true">
 										</td>
 									</tr>
 
@@ -77,7 +91,7 @@
 											<label for="">Phone no.</label>
 										</td>
 										<td>
-											<input type="text" id="phone" name="phone">
+											<input type="number" id="phone" name="phone">
 										</td>
 									</tr>
 
@@ -115,7 +129,7 @@
 									</tr>
 									<tr>
 										<td><label for="">Budget for trip *</label></td>
-										<td><input type="text" name="budget" id="budget" required="true"></td>
+										<td><input type="number" name="budget" id="budget" required="true"></td>
 									</tr>
 
 									<tr>
@@ -150,7 +164,7 @@
 										<input type="checkbox" id="budget" name="acomodation_pref[]" value="budget" />Budget Stay<br>
 										<input type="checkbox" id="resort" name="acomodation_pref[]" value="resort" />Resort<br>
 										<input type="checkbox" id="camping" name="acomodation_pref[]" value="camping" />Camping<br>
-										<input type="checkbox" id="nomadic" name="acomodation_pref[]" value="nomadic" />Homestay<br>
+										<input type="checkbox" id="nomadic" name="acomodation_pref[]" value="homestay" />Homestay<br>
 										</td>
 									</tr>
 									
@@ -159,7 +173,7 @@
 									</tr>
 
 									<td>
-	<!--  -->									<td><input type="submit" name="submit" value="Submit" style="border:3px solid #ebefe5;padding: 20px 40px; display: inline-block; margin: 15px 30px; text-transform: uppercase; letter-spacing: 1px;"></td>
+										<td><input type="submit" name="submit" value="Submit" style="border:3px solid #ebefe5;padding: 20px 40px; display: inline-block; margin: 15px 30px; text-transform: uppercase; letter-spacing: 1px;"></td>
 									</td>
 
 								</table>
