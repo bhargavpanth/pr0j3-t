@@ -87,7 +87,7 @@
 									<div id="cm">
 										<h4>Get in touch with us</h4>
 										<ul>
-											<li style="color:#efebe5">Email us at: <a href="mailto:hello@rusticroutes.com"><br>hello@rusticroutes.com</a></li>
+											<li style="color:#efebe5">Email us at: <a href="mailto:hello@onrusticroutes.com"><br>hello@onrusticroutes.com</a></li>
 											<li style="color:#efebe5">Call us at: <a href="#"><br>+91-9483128206/7022617122</a></li>
 											<div style="display:inline;">
 												<a href="https://www.facebook.com/onrusticroutes" target="_blank" style="padding-left: 20px;"><img src="../img/facebook.png" alt="facebook"></a>
