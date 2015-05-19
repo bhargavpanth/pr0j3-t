@@ -143,7 +143,7 @@
 											<label for="">Email</label>
 										</td>
 										<td>
-											<input type="text" id="email" name="email" required="true">
+											<input type="email" id="email" name="email" required="true">
 										</td>
 									</tr>
 
@@ -179,7 +179,7 @@
 
 									<tr>
 										<td><label for="">Mobile</label></td>
-										<td><input name="mobile" type="text" required="true"></td>
+										<td><input name="mobile" type="number" required="true"></td>
 									</tr>
 
 									<tr>
