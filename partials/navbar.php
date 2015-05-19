@@ -33,9 +33,9 @@
 												mysql_select_db($DB_NAME);
 												$sql="SELECT * FROM destinations;";
 												$query=mysql_query($sql);
-												while($data=mysql_fetch_object($query)){
+												while($data1=mysql_fetch_object($query)){
 													?>
-											<li><a href="destination.php?id=<?php echo $data->codeName; ?>"><?php echo $data->title; ?></a></li>
+											<li><a href="destination.php?id=<?php echo $data1->codeName; ?>"><?php echo $data1->title; ?></a></li>
 													<?php
 												}
 
