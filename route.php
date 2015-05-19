@@ -29,7 +29,20 @@
 			header("location:thankYou.php?fail");
 		}
 	}else{
-?>
+?><?php
+				require_once("config.php");
+				mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
+				mysql_select_db($DB_NAME);
+				$id		=	mysql_real_escape_string($_GET['id']);
+				$sql	=	"SELECT destinations.cover,routes.title,routes.type,routes.image,info.title as tit,info.vital,info.brief,info.details,info.guidelines,info.intro FROM routes,destinations,info WHERE routes.belongsTo=destinations.id AND routes.id='$id' AND info.belongsTo=routes.id;";
+				$query	=	mysql_query($sql) or die(mysql_error());
+				if(mysql_num_rows($query)==0){
+					header("location:404.php");
+				 	die();
+				}
+				$data	=	mysql_fetch_object($query);
+
+			?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <?php require 'partials/navbar.php' ?>
@@ -49,16 +62,6 @@
 	
 			<div class="main">
 			<center>
-			<?php
-				require_once("config.php");
-				mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
-				mysql_select_db($DB_NAME);
-				$id		=	mysql_real_escape_string($_GET['id']);
-				$sql	=	"SELECT destinations.cover,routes.title,routes.type,routes.image,info.title as tit,info.vital,info.brief,info.details,info.guidelines,info.intro FROM routes,destinations,info WHERE routes.belongsTo=destinations.id AND routes.id=$id AND info.belongsTo=routes.id;";
-				$query	=	mysql_query($sql);
-				$data	=	mysql_fetch_object($query);
-
-			?>
 			<img id="image" src="<?php echo $data->cover;?>" style='width:auto;' height="450" border="0" alt="cover">
 			</center>
 			<hr>
