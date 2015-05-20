@@ -6,8 +6,12 @@
 		require_once("config.php");
 		mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
 		mysql_select_db($DB_NAME);
-		$des		=	mysql_real_escape_string($_GET["id"]);
 		$trekDate	=	mysql_real_escape_string($_POST['date']);
+		$des		=	mysql_real_escape_string($_GET["id"]);
+		$data		=	mysql_fetch_object(mysql_query("SELECT * FROM routes WHERE `id` = '$des';"))->type;
+		if($data=="fixed"){
+			$trekDate="";
+		}
 		$firstName	=	mysql_real_escape_string($_POST['fname']); 
 		$sql="SELECT * FROM routes WHERE id=$des;";
 		$query=mysql_query($sql) or die(mysql_error());
@@ -22,7 +26,7 @@
 		$country	=	mysql_real_escape_string($_POST['country']);
 		$phoneNum	=	mysql_real_escape_string($_POST['mobile']);
 		$referal	=	mysql_real_escape_string($_POST['refereal']);
-		$sql		=	"INSERT INTO PlanYourWeekEnd (`fname`, `lname`, `email`, `dob`, `sex`, `address`, `city`, `state`, `country`, `mobile`, `referer`, `dateOfTrip`, `destination`) VALUES('$firstName', '', '$email', '$dob','$gender','$address','$city','','$country','$phoneNum','$referal','$trekDate','$des');";
+		$sql		=	"INSERT INTO PlanYourWeekEnd (`fname`, `lname`, `email`, `dob`, `sex`, `address`, `city`, `state`, `country`, `mobile`, `referer`, `dateOfTrip`, `destination`) VALUES('$firstName', '', '$email', '$dob','$gender','$address','$city','','$country','$phoneNum','$referal','','$des');";
 		if(mysql_query($sql)){
 			header("location:thankYou.php?success");
 		}else{
@@ -34,7 +38,7 @@
 				mysql_connect($DB_HOST,$DB_USER,$DB_PASS);
 				mysql_select_db($DB_NAME);
 				$id		=	mysql_real_escape_string($_GET['id']);
-				$sql	=	"SELECT destinations.cover,routes.title,routes.type,routes.image,info.title as tit,info.vital,info.brief,info.details,info.guidelines,info.intro FROM routes,destinations,info WHERE routes.belongsTo=destinations.id AND routes.id='$id' AND info.belongsTo=routes.id;";
+				$sql	=	"SELECT destinations.cover,routes.title,routes.type,routes.image,routes.fixedDate AS fixedDate,info.title AS tit,info.vital,info.brief,info.details,info.guidelines,info.intro FROM routes,destinations,info WHERE routes.belongsTo=destinations.id AND routes.id='$id' AND info.belongsTo=routes.id;";
 				$query	=	mysql_query($sql) or die(mysql_error());
 				if(mysql_num_rows($query)==0){
 					header("location:404.php");
@@ -47,7 +51,7 @@
 <html lang="en" class="no-js">
 <?php require 'partials/navbar.php' ?>
 	<head>
-		<title>Mallali Trek</title>
+		<title>Trek</title>
 		<link rel="stylesheet" type="text/css" href="css/content_default.css" />
 		<link rel="stylesheet" type="text/css" href="css/content_component.css" />
 		<script src="js/content_modernizr.custom.js"></script>
@@ -125,7 +129,16 @@
 											<label for="">Trek Batch</label>
 										</td>
 										<td>
-											<input type="date" name="date" required="true">
+											<?php
+												if($data->type=="fixed"){
+													?>
+													<input type="text" readonly="true" value="<?php echo $data->fixedDate; ?>" required="true">
+												<?php
+												}else{?>
+													<input type="date" name="date" required="true">
+												<?php
+												}
+											?>
 										</td>
 									</tr>
 
