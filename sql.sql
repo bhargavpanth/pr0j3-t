@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: rustic
 -- ------------------------------------------------------
--- Server version	10.0.17-MariaDB-log
+-- Server version	10.0.18-MariaDB-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -38,7 +38,7 @@ CREATE TABLE `PlanYourWeekEnd` (
   `dateOfTrip` date DEFAULT NULL,
   `destination` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +129,7 @@ CREATE TABLE `planYourTrip` (
   `destinationPref` text,
   `acomodationPref` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -138,6 +138,7 @@ CREATE TABLE `planYourTrip` (
 
 LOCK TABLES `planYourTrip` WRITE;
 /*!40000 ALTER TABLE `planYourTrip` DISABLE KEYS */;
+INSERT INTO `planYourTrip` VALUES (1,'Nishchal Gautam','gautam.nishchal@gmail.com','8904265492','solo','weekend','eighteen','Bangalore',5000,'%','%','');
 /*!40000 ALTER TABLE `planYourTrip` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -154,6 +155,7 @@ CREATE TABLE `routes` (
   `belongsTo` int(11) DEFAULT NULL,
   `type` enum('fixed','unique','other') DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
+  `fixedDate` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `belongsTo` (`belongsTo`),
   CONSTRAINT `routes_ibfk_1` FOREIGN KEY (`belongsTo`) REFERENCES `destinations` (`id`)
@@ -166,7 +168,7 @@ CREATE TABLE `routes` (
 
 LOCK TABLES `routes` WRITE;
 /*!40000 ALTER TABLE `routes` DISABLE KEYS */;
-INSERT INTO `routes` VALUES (1,'Hampta Pass Trek',1,'fixed','img/Himachal/HamptaPassThumb.png'),(2,'Brighu Lake Trek',1,'fixed','img/Himachal/BrighuLake.png'),(3,'Beas Kund Trek',1,'fixed','img/Himachal/BeasKund.png'),(4,'Malana Valley Trek',1,'fixed','img/Himachal/Malana.png'),(5,'Crystal Mountain Trek',1,'unique','img/Himachal/CrystalMountain.png'),(6,'Great Himalayan National Park Trek',1,'unique','img/Himachal/GreatHimalayaNationalPark.png'),(7,'Pin Parvati Trek',1,'other','img/Himachal/PinParvathi.png'),(8,'Bara Bangal Trek',1,'other','img/Himachal/BaraBangal.png'),(9,'Sharadabi Valley Trail',2,'unique','img/Coorg/Sharadabi.png'),(11,'Mukkodlu & Abhimatta falls Trail',2,'unique','img/Coorg/Mukkodlu.png'),(12,'Narimale Forest Camp',2,'unique','img/Coorg/Narimale.png'),(13,'Mallalli Falls Trail',2,'other','img/Coorg/Mallali.png'),(14,'Mandalpatti',2,'other','img/Coorg/mandalpatti.png'),(15,'Dolphin Exploration (South Goa)',3,'other','img/Goa/Dolphin.png'),(16,'Backwater Exploration (South Goa)',3,'other','img/Goa/Backwaterexploration.png'),(17,'BBQ and Drink mixing on the beach',3,'other','img/Goa/BBQ.png'),(18,'Kayaking (South Goa)',3,'other','img/Goa/Kayaking.png'),(19,'Jet Skiing',3,'other','img/Goa/JetSki.png'),(20,'Lake Exploration and Rock Climbing',4,'other','img/Hampi/Hampi1.png'),(21,'Relax Through Ages',4,'other','img/Hampi/HippieIsland.png'),(22,'Kardung La cycle Trail',1,'fixed','img/Himachal/28043854_l.png');
+INSERT INTO `routes` VALUES (1,'Hampta Pass Trek',1,'fixed','img/Himachal/HamptaPassThumb.png','30th Aug - 3rd Sept'),(2,'Brighu Lake Trek',1,'fixed','img/Himachal/BrighuLake.png','1st Aug - 4th Aug'),(3,'Beas Kund Trek',1,'fixed','img/Himachal/BeasKund.png','Beas Kund Trek 6th Sept - 9th Sept'),(4,'Malana Valley Trek',1,'fixed','img/Himachal/Malana.png','7th Aug - 10th Aug'),(5,'Crystal Mountain Trek',1,'unique','img/Himachal/CrystalMountain.png',''),(6,'Great Himalayan National Park Trek',1,'unique','img/Himachal/GreatHimalayaNationalPark.png',''),(7,'Pin Parvati Trek',1,'other','img/Himachal/PinParvathi.png',''),(8,'Bara Bangal Trek',1,'other','img/Himachal/BaraBangal.png',''),(9,'Sharadabi Valley Trail',2,'unique','img/Coorg/Sharadabi.png',''),(11,'Mukkodlu & Abhimatta falls Trail',2,'unique','img/Coorg/Mukkodlu.png',''),(12,'Narimale Forest Camp',2,'unique','img/Coorg/Narimale.png',''),(13,'Mallalli Falls Trail',2,'other','img/Coorg/Mallali.png',''),(14,'Mandalpatti',2,'other','img/Coorg/mandalpatti.png',''),(15,'Dolphin Exploration (South Goa)',3,'other','img/Goa/Dolphin.png',''),(16,'Backwater Exploration (South Goa)',3,'other','img/Goa/Backwaterexploration.png',''),(17,'BBQ and Drink mixing on the beach',3,'other','img/Goa/BBQ.png',''),(18,'Kayaking (South Goa)',3,'other','img/Goa/Kayaking.png',''),(19,'Jet Skiing',3,'other','img/Goa/JetSki.png',''),(20,'Lake Exploration and Rock Climbing',4,'other','img/Hampi/Hampi1.png',''),(21,'Relax Through Ages',4,'other','img/Hampi/HippieIsland.png',''),(22,'Kardung La cycle Trail',1,'fixed','img/Himachal/28043854_l.png','15th Aug to 26th Aug');
 /*!40000 ALTER TABLE `routes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -179,4 +181,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-18  0:15:50
+-- Dump completed on 2015-05-20 13:54:37
