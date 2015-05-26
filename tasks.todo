@@ -1,0 +1,14 @@
+Implement a responsive design
+remove partials thingy
+send an email to users
+have a admin panel
+
+
+
+/ (Index.controller DEFAULT)
+/destinations (Destination Controller with no parameters)
+/destinations/himachalpradesh (Destination Controller with himachal Pradesh as parameter which will choose from unique/fixedDate controller) will call destination view
+/destinations/himachalpradesh/mallali (Destination controller will call routes model will call routes view)
+/about/ (about controller will call __construct without parameter)
+/contact/ (contact controller will call __construct without parameter)
+/planyourtrip (Planyourtrip controller will call construct without parameter)
